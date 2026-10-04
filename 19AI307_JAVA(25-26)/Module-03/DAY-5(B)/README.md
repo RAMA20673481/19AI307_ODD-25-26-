@@ -83,3 +83,13 @@ public class PrimeChecker {
 <img width="893" height="258" alt="image" src="https://github.com/user-attachments/assets/2cfce946-0ad1-43c0-a0b9-9f1d4d27a34b" />
 
 
+
+## RESULT:
+Therefore the program successfully checks if the input number is a prime using the Integer wrapper class.
+
+
+
+
+
+
+
