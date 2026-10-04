@@ -1,8 +1,4 @@
 # Ex.No:2(B) METHODS
-
-## QUESTION:
-Write a method int cube(int x) that calls a method int square(int x) internally to calculate the cube as x * square(x).
-
 ## AIM:
 To write a Java program that defines a method cube(int x) which internally calls the method square(int x) to compute the cube of a number.
 
@@ -56,3 +52,18 @@ public class main
         int n=sc.nextInt();
         demo d=new demo();
         System.out.println(d.cube(n));
+    }
+}
+```
+
+
+## OUTPUT:
+<img width="392" height="243" alt="image" src="https://github.com/user-attachments/assets/aa929a40-c871-4a15-8d09-12604778a14b" />
+
+
+
+## RESULT:
+Therefore the program successfully computes the cube of a number by internally using the square method.
+
+
+
