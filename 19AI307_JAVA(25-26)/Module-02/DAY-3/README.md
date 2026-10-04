@@ -1,102 +1,87 @@
-# Ex.No:2(C) ACCESS SPECIFIERS
+# Ex.No:2(D) VARIABLE SCOPE AND CONSTRUCTOR
 
 ## QUESTION:
-Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.
+Write a class that uses a constructor to initialize variables and overrides toString() method.
 
 ## AIM:
-To write a Java program that defines a class BankAccount with private attributes accountNumber and balance, and provides public getter and setter methods to access and modify these values.
+To write a Java program that initializes object variables using a constructor and overrides the toString() method to display object details in a readable format.
 
 ## ALGORITHM :
-1. Define a class BankAccount with two private instance variables:
 
-        String accountNumber
+1. Define a class Student with two instance variables:
 
-        double balance
+     String name
 
-3. Create public getter and setter methods for both variables:
+     int age
 
-      getAccountNumber() and setAccountNumber()
-   
-   
-      getBalance() and setBalance()
+2. Create a parameterized constructor to initialize these variables.
 
-5. In the main() method, create a Scanner object to read input from the user.
+3. Override the toString() method to return the student details in a formatted string.
 
-6. Create an object of the BankAccount class.
+4. In the main() method:
 
-7. Read the account number and balance from the user and store them using setter methods.
+    - Read the name and age from the user.
 
-8. Retrieve and print the stored values using getter methods.
+    - Create a Student object using the constructor.
 
-9. Close the Scanner and end the program.
+5. Print the object, which automatically calls the overridden toString() method.
 
-
+6. End the program.
 
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Access Specifiers using Java
+Program to implement a Variable scope and Constructor using Java
 Developed by: HARISH KUMAR S
 RegisterNumber: 212224230091
 */
 ```
 
 ## SOURCE CODE:
+
 ```
 import java.util.Scanner;
 
-class BankAccount {
-   
-    private String accountNumber;
-    private double balance;
+class Student {
+    String name;
+    int age;
 
-    
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-   
-    public double getBalance() {
-        return balance;
-    }
-    public void setBalance(double balance) {
-        this.balance = balance;
+    @Override
+    public String toString() {
+        return "Student{name='" + name + "', age=" + age + "}";
     }
 }
 
-public class prog {
+public class StudentDemo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        int age = scanner.nextInt();
 
-        BankAccount account = new BankAccount();
-
-        String accNo = sc.nextLine();
-        double bal = sc.nextDouble();
-
-        account.setAccountNumber(accNo);
-        account.setBalance(bal);
-
-        System.out.println("Account Number: " + account.getAccountNumber());
-        System.out.println("Balance: " + account.getBalance());
-
-        sc.close();
+        Student student = new Student(name, age);
+        System.out.println(student.toString());
     }
 }
 ```
 
+
+
+
 ## OUTPUT:
-<img width="826" height="465" alt="image" src="https://github.com/user-attachments/assets/972c4fcf-d9d0-43f8-bc30-518764a4d55e" />
+<img width="896" height="395" alt="image" src="https://github.com/user-attachments/assets/0b280b01-a09a-4749-b733-41411f01b00a" />
+
 
 
 
 ## RESULT:
-Therfore the program successfully stores account details using setter methods and retrieves them using getter methods.
-
+Therefore the program successfully creates a student object using the constructor.
 
 
 
