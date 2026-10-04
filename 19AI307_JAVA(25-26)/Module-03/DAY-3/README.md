@@ -137,5 +137,3 @@ Therefore the program successfully decodes messages using the rules defined for 
 
 
 
-## SOURCE CODE:
-
