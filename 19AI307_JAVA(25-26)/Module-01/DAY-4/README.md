@@ -1,29 +1,34 @@
-# Ex.No:1(C) LOOPING STATEMENT
+# Ex.No:1(D) ARRAYS
 
 ## QUESTION:
-Display Factors of a Number
-
+Write a Java program to find the index of a given element in an array
 
 ## AIM:
-To write a Java program that reads an integer from the user and displays all the factors of the given number.
+To write a Java program that reads an array of integers and finds the index of a given element within the array.
 
 ## ALGORITHM :
-1.Start the program and read an integer n from the user.
+1.Start the program and read the size of the array n.
 
-2.Loop from 1 to n and check if each number i divides n exactly (i.e., n % i == 0).
+2.Read n integer elements and store them in the array a[ ].
 
-3.If yes, print i as a factor.
+3.Read the element x whose index needs to be found.
 
-4.Continue the loop until all factors are printed.
+4.Traverse the array from index 0 to n-1:
 
-5.End the program.
+     If a[i] == x, print the index i and terminate the program.
+
+5.If the loop finishes without a match, print "Element not found".
+
+6.End the program.	
+
+
 
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Looping Statement using Java
+Program to implement a Array concept using Java
 Developed by: HARISH KUMAR S
 RegisterNumber: 212224230091
 */
@@ -33,27 +38,41 @@ RegisterNumber: 212224230091
 ```
 import java.util.Scanner;
 
-public class Factors {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
-        System.out.print("Factors: ");
-        for (int i = 1; i <= n; i++) {
-            if (n % i == 0) { 
-                System.out.print(i + " ");
-            }
+        int a[] = new int[n];
+        for (int i = 0; i < n; i++) 
+        {
+        a[i] = sc.nextInt();
         }
+        
+        int x = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            if (a[i] == x) {
+                System.out.println(i);
+                return;
+            }
+            
+        }
+        System.out.println("Element not found");
+        
     }
 }
 ```
 
 
 
+
 ## OUTPUT:
-<img width="783" height="324" alt="image" src="https://github.com/user-attachments/assets/aec35b44-acab-4431-893b-df99fc8c8cd4" />
+<img width="558" height="590" alt="image" src="https://github.com/user-attachments/assets/0d53717f-affe-4aaf-b448-35ef728bee48" />
+
 
 
 ## RESULT:
-Therefore, the program successfully reads a number from the user and computes its factors.
+Therefore the program successfully searches the array for the given element.
+
+
+
 
